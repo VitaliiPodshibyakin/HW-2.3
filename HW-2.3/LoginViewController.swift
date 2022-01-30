@@ -11,15 +11,10 @@ class LoginViewController: UIViewController {
     
     @IBOutlet var loginTextField: UILabel!
     
-    var loginText: String!
+    var loginText = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginTextField.text = loginText
-    }
-
-    @IBAction func logOutButton() {
-        dismiss(animated: true) {
-        }
+        loginTextField.text = "Welcome, \(loginText)"
     }
 }

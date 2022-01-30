@@ -11,30 +11,28 @@ class ViewController: UIViewController {
     
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextfield: UITextField!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    private let userName = "user"
+    private let password = "password"
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let loginViewController = segue.destination as? LoginViewController else {return}
+        loginViewController.loginText = userName
     }
-
+    
     @IBAction func logInButton() {
-        if userNameTextField.text == "user", passwordTextfield.text == "password" {
-        } else {
+        if userNameTextField.text != userName || passwordTextfield.text != password {
             showAlert(with: "Error", and: "Invalid login or password")
             passwordTextfield.text = ""
         }
         }
 
     @IBAction func forgotLoginButton() {
-        showAlert(with: "Oops!", and: "Your login is 'user'")
+        showAlert(with: "Oops!", and: "Your login is '\(userName)'")
         }
     
     @IBAction func forgotPassword() {
-        showAlert(with: "Oops!", and: "Your login is 'password'")
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let loginViewController = segue.destination as? LoginViewController else {return}
-        loginViewController.loginText = "Hello, " + userNameTextField.text! + "!"
+        showAlert(with: "Oops!", and: "Your login is '\(password)'")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -54,10 +52,23 @@ extension ViewController {
     }
 }
 // MARK: - Touches
-extension ViewController {
+extension ViewController: UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super .touchesBegan(touches, with: event)
+        super.touchesBegan(touches, with: event)
+        self.view.endEditing(true)
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userNameTextField {
+            passwordTextfield.becomeFirstResponder()
+        } else {
+            logInButton()
+            performSegue(withIdentifier: "showLoginVC", sender: nil)
+        }
+        return true
     }
 }
+
+
 
 
