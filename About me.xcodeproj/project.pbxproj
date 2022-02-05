@@ -14,10 +14,12 @@
 		3F907AF527A42C25009CB500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F907AF427A42C25009CB500 /* Assets.xcassets */; };
 		3F907AF827A42C25009CB500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F907AF627A42C25009CB500 /* LaunchScreen.storyboard */; };
 		3F907B0027A431BC009CB500 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F907AFF27A431BC009CB500 /* WelcomeViewController.swift */; };
+		3FD0418727AA93720039D60B /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0418627AA93720039D60B /* UserData.swift */; };
+		3FD0418A27AAF69B0039D60B /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0418927AAF69B0039D60B /* AboutMeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F907AE827A42C24009CB500 /* HW-2.3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW-2.3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F907AE827A42C24009CB500 /* About me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "About me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F907AEB27A42C24009CB500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F907AED27A42C24009CB500 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3F907AEF27A42C24009CB500 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		3F907AF727A42C25009CB500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F907AF927A42C25009CB500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F907AFF27A431BC009CB500 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		3FD0418627AA93720039D60B /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		3FD0418927AAF69B0039D60B /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +46,7 @@
 		3F907ADF27A42C24009CB500 = {
 			isa = PBXGroup;
 			children = (
-				3F907AEA27A42C24009CB500 /* HW-2.3 */,
+				3F907AEA27A42C24009CB500 /* About me */,
 				3F907AE927A42C24009CB500 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,32 +54,74 @@
 		3F907AE927A42C24009CB500 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3F907AE827A42C24009CB500 /* HW-2.3.app */,
+				3F907AE827A42C24009CB500 /* About me.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3F907AEA27A42C24009CB500 /* HW-2.3 */ = {
+		3F907AEA27A42C24009CB500 /* About me */ = {
+			isa = PBXGroup;
+			children = (
+				3FD0418127AA92210039D60B /* ViewControllers */,
+				3FD0418827AA937B0039D60B /* Models */,
+				3FD0418427AA92E60039D60B /* StoryBoards */,
+				3FD0418327AA92570039D60B /* App */,
+				3FD0418527AA92FF0039D60B /* Resources */,
+			);
+			path = "About me";
+			sourceTree = "<group>";
+		};
+		3FD0418127AA92210039D60B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3F907AEF27A42C24009CB500 /* LoginViewController.swift */,
+				3F907AFF27A431BC009CB500 /* WelcomeViewController.swift */,
+				3FD0418927AAF69B0039D60B /* AboutMeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3FD0418327AA92570039D60B /* App */ = {
 			isa = PBXGroup;
 			children = (
 				3F907AEB27A42C24009CB500 /* AppDelegate.swift */,
 				3F907AED27A42C24009CB500 /* SceneDelegate.swift */,
-				3F907AEF27A42C24009CB500 /* LoginViewController.swift */,
-				3F907AF127A42C24009CB500 /* Main.storyboard */,
-				3F907AFF27A431BC009CB500 /* WelcomeViewController.swift */,
-				3F907AF427A42C25009CB500 /* Assets.xcassets */,
-				3F907AF627A42C25009CB500 /* LaunchScreen.storyboard */,
 				3F907AF927A42C25009CB500 /* Info.plist */,
 			);
-			path = "HW-2.3";
+			path = App;
+			sourceTree = "<group>";
+		};
+		3FD0418427AA92E60039D60B /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				3F907AF127A42C24009CB500 /* Main.storyboard */,
+				3F907AF627A42C25009CB500 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		3FD0418527AA92FF0039D60B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3F907AF427A42C25009CB500 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3FD0418827AA937B0039D60B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3FD0418627AA93720039D60B /* UserData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3F907AE727A42C24009CB500 /* HW-2.3 */ = {
+		3F907AE727A42C24009CB500 /* About me */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3F907AFC27A42C25009CB500 /* Build configuration list for PBXNativeTarget "HW-2.3" */;
+			buildConfigurationList = 3F907AFC27A42C25009CB500 /* Build configuration list for PBXNativeTarget "About me" */;
 			buildPhases = (
 				3F907AE427A42C24009CB500 /* Sources */,
 				3F907AE527A42C24009CB500 /* Frameworks */,
@@ -85,9 +131,9 @@
 			);
 			dependencies = (
 			);
-			name = "HW-2.3";
+			name = "About me";
 			productName = "HW-2.3";
-			productReference = 3F907AE827A42C24009CB500 /* HW-2.3.app */;
+			productReference = 3F907AE827A42C24009CB500 /* About me.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +151,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3F907AE327A42C24009CB500 /* Build configuration list for PBXProject "HW-2.3" */;
+			buildConfigurationList = 3F907AE327A42C24009CB500 /* Build configuration list for PBXProject "About me" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,7 +164,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3F907AE727A42C24009CB500 /* HW-2.3 */,
+				3F907AE727A42C24009CB500 /* About me */,
 			);
 		};
 /* End PBXProject section */
@@ -144,6 +190,8 @@
 				3F907B0027A431BC009CB500 /* WelcomeViewController.swift in Sources */,
 				3F907AF027A42C24009CB500 /* LoginViewController.swift in Sources */,
 				3F907AEC27A42C24009CB500 /* AppDelegate.swift in Sources */,
+				3FD0418727AA93720039D60B /* UserData.swift in Sources */,
+				3FD0418A27AAF69B0039D60B /* AboutMeViewController.swift in Sources */,
 				3F907AEE27A42C24009CB500 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,7 +343,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GHQ3446M48;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HW-2.3/Info.plist";
+				INFOPLIST_FILE = "About me/App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "About me";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -323,7 +372,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GHQ3446M48;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HW-2.3/Info.plist";
+				INFOPLIST_FILE = "About me/App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "About me";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -345,7 +395,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3F907AE327A42C24009CB500 /* Build configuration list for PBXProject "HW-2.3" */ = {
+		3F907AE327A42C24009CB500 /* Build configuration list for PBXProject "About me" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3F907AFA27A42C25009CB500 /* Debug */,
@@ -354,7 +404,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3F907AFC27A42C25009CB500 /* Build configuration list for PBXNativeTarget "HW-2.3" */ = {
+		3F907AFC27A42C25009CB500 /* Build configuration list for PBXNativeTarget "About me" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3F907AFD27A42C25009CB500 /* Debug */,

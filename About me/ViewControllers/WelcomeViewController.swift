@@ -17,4 +17,5 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         loginTextField.text = "Welcome, \(loginText)"
     }
+    
 }

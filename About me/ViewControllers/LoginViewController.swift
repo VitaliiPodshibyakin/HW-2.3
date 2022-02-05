@@ -9,36 +9,49 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    // MARK: - IB Outlets
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextfield: UITextField!
     
-    private let userName = "user"
-    private let password = "password"
+    // MARK: - Private properties
+    let user = UserData.getPerson()
     
+    // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let loginViewController = segue.destination as? WelcomeViewController else {return}
-        loginViewController.loginText = userName
-    }
-    
+        let tabBarController = segue.destination as! UITabBarController
+        guard let viewControllers = tabBarController.viewControllers else {return}
+        
+        for viewController in viewControllers {
+               if let welcomeVC = viewController as? WelcomeViewController {
+                   welcomeVC.loginText = "\(user.person.firstName) \(user.person.secondName)"
+               } else if let navigationVC = viewController as? UINavigationController {
+                   let aboutMeVC = navigationVC.topViewController as! AboutMeViewController
+                   aboutMeVC.definitionText = user.person.definition
+               }
+            }
+   }
+
+    // MARK: IBActions
     @IBAction func logInButton() {
-        if userNameTextField.text != userName || passwordTextfield.text != password {
+        if userNameTextField.text != user.user || passwordTextfield.text != user.password {
             showAlert(with: "Error", and: "Invalid login or password")
             passwordTextfield.text = ""
         }
         }
 
     @IBAction func forgotLoginButton() {
-        showAlert(with: "Oops!", and: "Your login is '\(userName)'")
+        showAlert(with: "Oops!", and: "Your login is '\(user.user)'")
         }
     
     @IBAction func forgotPassword() {
-        showAlert(with: "Oops!", and: "Your login is '\(password)'")
+        showAlert(with: "Oops!", and: "Your login is '\(user.password)'")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         passwordTextfield.text = ""
         userNameTextField.text = ""
     }
+    
 }
 
 
